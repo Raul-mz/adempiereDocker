@@ -25,6 +25,9 @@ RUN apt-get update && apt-get install -y python-software-properties software-pro
 # Note: The official Debian and Ubuntu images automatically ``apt-get clean``
 # after each ``apt-get``
 
+# Add openjdk repository
+RUN add-apt-repository ppa:openjdk-r/ppa  
+
 # Install Java.
 RUN \
   apt-get update && \
